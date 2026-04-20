@@ -26,7 +26,7 @@ All notable changes to Claude Quota Monitor are documented here.
 
 ---
 
-## [1.4] — 2026-03-XX
+## [1.4] — 2026-03-18
 
 - Initial public release
 - Session quota (5h window) with badge in toolbar
