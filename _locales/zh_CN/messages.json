@@ -1,0 +1,101 @@
+{
+  "ext_name": {
+    "message": "Claude 配额监控"
+  },
+  "ext_description": {
+    "message": "在浏览器工具栏中直接显示您的 Claude.ai 配额使用情况。"
+  },
+  "session_label": {
+    "message": "当前会话 (5小时)"
+  },
+  "weekly_label": {
+    "message": "每周 (7天)"
+  },
+  "resets_in": {
+    "message": "重置于"
+  },
+  "view_quota_btn": {
+    "message": "在 claude.ai 查看配额"
+  },
+  "no_data_hint": {
+    "message": "暂无数据。请打开 claude.ai 以获取配额信息。"
+  },
+  "updated_ago": {
+    "message": "已更新"
+  },
+  "used_suffix": {
+    "message": "已使用"
+  },
+  "remaining": {
+    "message": "剩余"
+  },
+  "now": {
+    "message": "刚刚"
+  },
+  "refresh_title": {
+    "message": "立即刷新"
+  },
+  "donate_btn": {
+    "message": "捐款支持"
+  },
+  "onboarding_title": {
+    "message": "欢迎使用 Claude Quota Monitor"
+  },
+  "onboarding_subtitle": {
+    "message": "直接在浏览器工具栏中追踪您的 Claude.ai 配额使用情况，不再担心对话中途超出限制。"
+  },
+  "onboarding_steps_title": {
+    "message": "快速开始 — 4 个步骤"
+  },
+  "onboarding_step1_title": {
+    "message": "打开 Claude.ai"
+  },
+  "onboarding_step1_desc": {
+    "message": "访问 claude.ai 并登录您的账户。扩展程序会在页面加载时自动获取配额数据 — 无需任何设置。"
+  },
+  "onboarding_step2_title": {
+    "message": "查看工具栏图标徽标"
+  },
+  "onboarding_step2_desc": {
+    "message": "扩展图标上将显示一个徽标，显示当前会话用量（如 22%）。用量达到 70% 时变为橙色，90% 时变为红色。"
+  },
+  "onboarding_step3_title": {
+    "message": "点击查看完整详情"
+  },
+  "onboarding_step3_desc": {
+    "message": "点击图标可查看会话和每周用量、距离重置的剩余时间以及手动刷新按钮。数据每 10 分钟自动更新一次。"
+  },
+  "onboarding_cta": {
+    "message": "打开 Claude.ai"
+  },
+  "onboarding_donate": {
+    "message": "喜欢这个扩展？捐款支持"
+  },
+  "onboarding_footer": {
+    "message": "免费开放。无需账户，不追踪数据。"
+  },
+  "pill_session": {
+    "message": "会话用量 (5小时)"
+  },
+  "pill_weekly": {
+    "message": "每周用量 (7天)"
+  },
+  "pill_auto_update": {
+    "message": "自动后台更新"
+  },
+  "pill_badge": {
+    "message": "工具栏徽标"
+  },
+  "pill_free": {
+    "message": "免费"
+  },
+  "onboarding_step4_title": {
+    "message": "将扩展程序固定到工具栏"
+  },
+  "weekly_all_models": {
+    "message": "所有模型"
+  },
+  "weekly_design": {
+    "message": "Claude Design"
+  }
+}

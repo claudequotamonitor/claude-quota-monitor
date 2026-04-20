@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "test": "node tests/run.js"
+  },
+  "devDependencies": {
+    "pngjs": "^7.0.0",
+    "puppeteer": "^24.41.0"
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "ext_name": {
+    "message": "Claude Quota Monitor"
+  },
+  "ext_description": {
+    "message": "Отображает использование квоты Claude.ai прямо на панели инструментов браузера."
+  },
+  "session_label": {
+    "message": "Текущая сессия (5ч)"
+  },
+  "weekly_label": {
+    "message": "Еженедельно (7 дней)"
+  },
+  "resets_in": {
+    "message": "сброс через"
+  },
+  "view_quota_btn": {
+    "message": "Посмотреть квоту на claude.ai"
+  },
+  "no_data_hint": {
+    "message": "Нет данных. Откройте claude.ai для получения данных о квоте."
+  },
+  "updated_ago": {
+    "message": "обновлено"
+  },
+  "used_suffix": {
+    "message": "использовано"
+  },
+  "remaining": {
+    "message": "осталось"
+  },
+  "now": {
+    "message": "только что"
+  },
+  "refresh_title": {
+    "message": "Обновить сейчас"
+  },
+  "donate_btn": {
+    "message": "Поддержать донатом"
+  },
+  "onboarding_title": {
+    "message": "Добро пожаловать в Claude Quota Monitor"
+  },
+  "onboarding_subtitle": {
+    "message": "Отслеживайте использование квоты Claude.ai прямо на панели инструментов браузера — никаких сюрпризов в середине разговора."
+  },
+  "onboarding_steps_title": {
+    "message": "Начало работы — 4 шага"
+  },
+  "onboarding_step1_title": {
+    "message": "Откройте Claude.ai"
+  },
+  "onboarding_step1_desc": {
+    "message": "Перейдите на claude.ai и войдите в аккаунт. Расширение автоматически захватывает данные о квоте при загрузке страницы — без настройки."
+  },
+  "onboarding_step2_title": {
+    "message": "Проверьте значок на панели"
+  },
+  "onboarding_step2_desc": {
+    "message": "На иконке расширения появится значок с текущим использованием сессии (например, 22%). Цвет меняется на оранжевый при 70% и красный при 90%."
+  },
+  "onboarding_step3_title": {
+    "message": "Нажмите для подробностей"
+  },
+  "onboarding_step3_desc": {
+    "message": "Нажмите на иконку, чтобы увидеть использование сессии и за неделю, время до сброса и кнопку ручного обновления. Данные обновляются автоматически каждые 10 минут."
+  },
+  "onboarding_cta": {
+    "message": "Открыть Claude.ai"
+  },
+  "onboarding_donate": {
+    "message": "Нравится? Поддержите донатом"
+  },
+  "onboarding_footer": {
+    "message": "Бесплатно и открыто. Без аккаунта, без слежки."
+  },
+  "pill_session": {
+    "message": "Использование сессии (5ч)"
+  },
+  "pill_weekly": {
+    "message": "Еженедельное использование (7 дней)"
+  },
+  "pill_auto_update": {
+    "message": "Автоматические фоновые обновления"
+  },
+  "pill_badge": {
+    "message": "Значок на панели"
+  },
+  "pill_free": {
+    "message": "Бесплатно"
+  },
+  "onboarding_step4_title": {
+    "message": "Закрепите расширение на панели инструментов"
+  },
+  "weekly_all_models": {
+    "message": "Все модели"
+  },
+  "weekly_design": {
+    "message": "Claude Design"
+  }
+}

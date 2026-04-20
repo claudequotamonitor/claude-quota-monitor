@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Claude Quota Monitor</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <svg class="logo" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="32" height="32" rx="7" fill="#0a0a18"/>
+        <defs>
+          <linearGradient id="lg" x1="6" y1="6" x2="26" y2="26" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#a78bfa"/>
+            <stop offset="100%" stop-color="#c058f6"/>
+          </linearGradient>
+        </defs>
+        <circle cx="16" cy="16" r="10.5" stroke="#2e2a72" stroke-width="3.5" fill="none"
+                stroke-dasharray="52.5 13.6" stroke-linecap="round"
+                transform="rotate(25 16 16)"/>
+        <circle cx="16" cy="16" r="10.5" stroke="url(#lg)" stroke-width="3.5" fill="none"
+                stroke-dasharray="34.1 32" stroke-linecap="round"
+                transform="rotate(25 16 16)"/>
+        <circle cx="16" cy="16" r="2" fill="#dcd8f5"/>
+      </svg>
+      <div>
+        <h1>Claude Quota Monitor</h1>
+        <span id="plan" class="badge">—</span>
+      </div>
+    </header>
+
+    <section id="data-section" class="hidden">
+      <!-- Sessão (5h) -->
+      <div class="stat-label" data-i18n="session_label"></div>
+      <div class="bar-wrapper">
+        <div id="bar" class="bar"></div>
+      </div>
+      <div class="bar-meta">
+        <span id="pct-text">—</span>
+        <div class="reset-chip">
+          <span class="muted" data-i18n="resets_in"></span>
+          <span id="reset-text">—</span>
+        </div>
+      </div>
+
+      <!-- Semanal (7d) -->
+      <div id="weekly-row" class="weekly-row hidden">
+        <div class="stat-label" data-i18n="weekly_label"></div>
+
+        <!-- Todos os modelos -->
+        <div class="weekly-category">
+          <div class="weekly-cat-label" data-i18n="weekly_all_models"></div>
+          <div class="bar-wrapper bar-wrapper--sm">
+            <div id="bar-weekly" class="bar bar--sm"></div>
+          </div>
+          <div class="bar-meta">
+            <span id="weekly-pct-text" class="small">—</span>
+            <span id="weekly-reset-text" class="muted small">—</span>
+          </div>
+        </div>
+
+        <!-- Claude Design -->
+        <div class="weekly-category hidden" id="design-category">
+          <div class="weekly-cat-divider"></div>
+          <div class="weekly-cat-label" data-i18n="weekly_design"></div>
+          <div class="bar-wrapper bar-wrapper--sm">
+            <div id="bar-weekly-design" class="bar bar--sm bar--design"></div>
+          </div>
+          <div class="bar-meta">
+            <span id="weekly-design-pct-text" class="small">—</span>
+            <span id="weekly-design-reset-text" class="muted small">—</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="update-row">
+        <span id="last-update" class="muted small"></span>
+        <button id="sync-btn" data-i18n-title="refresh_title">
+          <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 3v4.5H11.5"/>
+            <path d="M2 15v-4.5H6.5"/>
+            <path d="M3.5 9A6.5 6.5 0 0 1 14.5 5.2"/>
+            <path d="M14.5 9A6.5 6.5 0 0 1 3.5 12.8"/>
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <section id="empty-section">
+      <p class="hint" id="no-data-hint"></p>
+    </section>
+
+    <footer>
+      <button id="refresh-btn" data-i18n="view_quota_btn"></button>
+      <button id="donate-btn">
+        <svg viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3.172 5.172a4 4 0 0 1 5.656 0L10 6.343l1.172-1.171a4 4 0 1 1 5.656 5.656L10 17.657l-6.828-6.829a4 4 0 0 1 0-5.656z"/>
+        </svg>
+        <span data-i18n="donate_btn"></span>
+      </button>
+    </footer>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+{
+  "ext_name": {
+    "message": "Claude कोटा मॉनिटर"
+  },
+  "ext_description": {
+    "message": "ब्राउज़र टूलबार में सीधे अपना Claude.ai कोटा उपयोग देखें।"
+  },
+  "session_label": {
+    "message": "वर्तमान सत्र (5 घंटे)"
+  },
+  "weekly_label": {
+    "message": "साप्ताहिक (7 दिन)"
+  },
+  "resets_in": {
+    "message": "रीसेट होगा"
+  },
+  "view_quota_btn": {
+    "message": "claude.ai पर कोटा देखें"
+  },
+  "no_data_hint": {
+    "message": "अभी कोई डेटा नहीं। अपना कोटा देखने के लिए claude.ai खोलें।"
+  },
+  "updated_ago": {
+    "message": "अपडेट किया"
+  },
+  "used_suffix": {
+    "message": "उपयोग किया"
+  },
+  "remaining": {
+    "message": "शेष"
+  },
+  "now": {
+    "message": "अभी"
+  },
+  "refresh_title": {
+    "message": "अभी रीफ्रेश करें"
+  },
+  "donate_btn": {
+    "message": "दान से समर्थन करें"
+  },
+  "onboarding_title": {
+    "message": "Claude Quota Monitor में आपका स्वागत है"
+  },
+  "onboarding_subtitle": {
+    "message": "सीधे ब्राउज़र टूलबार में Claude.ai कोटा उपयोग ट्रैक करें, बातचीत के बीच में कोई आश्चर्य नहीं।"
+  },
+  "onboarding_steps_title": {
+    "message": "शुरुआत करें — 4 चरण"
+  },
+  "onboarding_step1_title": {
+    "message": "Claude.ai खोलें"
+  },
+  "onboarding_step1_desc": {
+    "message": "claude.ai पर जाएं और लॉग इन करें। एक्सटेंशन पेज लोड होने पर स्वचालित रूप से कोटा डेटा कैप्चर करता है — कोई सेटअप आवश्यक नहीं।"
+  },
+  "onboarding_step2_title": {
+    "message": "टूलबार बैज देखें"
+  },
+  "onboarding_step2_desc": {
+    "message": "आइकन पर एक बैज दिखाई देगा जो वर्तमान सत्र का उपयोग दिखाता है (जैसे 22%)। 70% पर नारंगी और 90% पर लाल रंग हो जाता है।"
+  },
+  "onboarding_step3_title": {
+    "message": "पूरी जानकारी के लिए क्लिक करें"
+  },
+  "onboarding_step3_desc": {
+    "message": "आइकन पर क्लिक करके सत्र और साप्ताहिक उपयोग, रीसेट तक का समय और मैन्युअल रिफ्रेश बटन देखें। डेटा हर 10 मिनट में स्वचालित रूप से अपडेट होता है।"
+  },
+  "onboarding_cta": {
+    "message": "Claude.ai खोलें"
+  },
+  "onboarding_donate": {
+    "message": "पसंद आया? दान से समर्थन करें"
+  },
+  "onboarding_footer": {
+    "message": "मुफ़्त और खुला। कोई खाता नहीं, कोई ट्रैकिंग नहीं।"
+  },
+  "pill_session": {
+    "message": "सत्र उपयोग (5 घंटे)"
+  },
+  "pill_weekly": {
+    "message": "साप्ताहिक उपयोग (7 दिन)"
+  },
+  "pill_auto_update": {
+    "message": "स्वचालित बैकग्राउंड अपडेट"
+  },
+  "pill_badge": {
+    "message": "टूलबार में बैज"
+  },
+  "pill_free": {
+    "message": "मुफ़्त"
+  },
+  "onboarding_step4_title": {
+    "message": "एक्सटेंशन को टूलबार में पिन करें"
+  },
+  "weekly_all_models": {
+    "message": "सभी मॉडल"
+  },
+  "weekly_design": {
+    "message": "Claude Design"
+  }
+}

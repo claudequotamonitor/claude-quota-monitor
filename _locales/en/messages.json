@@ -1,0 +1,101 @@
+{
+  "ext_name": {
+    "message": "Claude Quota Monitor"
+  },
+  "ext_description": {
+    "message": "Shows your Claude.ai quota usage directly in the browser toolbar."
+  },
+  "session_label": {
+    "message": "Current session (5h)"
+  },
+  "weekly_label": {
+    "message": "Weekly (7 days)"
+  },
+  "resets_in": {
+    "message": "resets in"
+  },
+  "view_quota_btn": {
+    "message": "View quota on claude.ai"
+  },
+  "no_data_hint": {
+    "message": "No data yet. Open claude.ai to capture your quota."
+  },
+  "updated_ago": {
+    "message": "updated"
+  },
+  "used_suffix": {
+    "message": "used"
+  },
+  "remaining": {
+    "message": "remaining"
+  },
+  "now": {
+    "message": "now"
+  },
+  "refresh_title": {
+    "message": "Refresh now"
+  },
+  "donate_btn": {
+    "message": "Support with a donation"
+  },
+  "onboarding_title": {
+    "message": "Welcome to Claude Quota Monitor"
+  },
+  "onboarding_subtitle": {
+    "message": "Track your Claude.ai usage directly in the browser toolbar, so you never get caught off guard mid-conversation."
+  },
+  "onboarding_steps_title": {
+    "message": "Getting started — 4 steps"
+  },
+  "onboarding_step1_title": {
+    "message": "Open Claude.ai"
+  },
+  "onboarding_step1_desc": {
+    "message": "Visit claude.ai and log in to your account. The extension captures your quota data automatically on page load — no setup required."
+  },
+  "onboarding_step2_title": {
+    "message": "Check the toolbar badge"
+  },
+  "onboarding_step2_desc": {
+    "message": "A badge will appear on the extension icon showing your current session usage (e.g. 22%). Color changes to orange at 70% and red at 90%."
+  },
+  "onboarding_step3_title": {
+    "message": "Click for full details"
+  },
+  "onboarding_step3_desc": {
+    "message": "Click the icon to see your session and weekly usage, remaining time until reset, and a manual refresh button. Data updates automatically every 10 minutes."
+  },
+  "onboarding_cta": {
+    "message": "Open Claude.ai"
+  },
+  "onboarding_donate": {
+    "message": "Enjoying it? Support with a donation"
+  },
+  "onboarding_footer": {
+    "message": "Free & open. No account, no tracking."
+  },
+  "pill_session": {
+    "message": "Session usage (5h)"
+  },
+  "pill_weekly": {
+    "message": "Weekly usage (7 days)"
+  },
+  "pill_auto_update": {
+    "message": "Auto background updates"
+  },
+  "pill_badge": {
+    "message": "Badge in toolbar"
+  },
+  "pill_free": {
+    "message": "Free"
+  },
+  "onboarding_step4_title": {
+    "message": "Pin the extension to your toolbar"
+  },
+  "weekly_all_models": {
+    "message": "All models"
+  },
+  "weekly_design": {
+    "message": "Claude Design"
+  }
+}

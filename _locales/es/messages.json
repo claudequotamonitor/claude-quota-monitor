@@ -1,0 +1,101 @@
+{
+  "ext_name": {
+    "message": "Claude Quota Monitor"
+  },
+  "ext_description": {
+    "message": "Muestra el uso de tu cuota de Claude.ai directamente en la barra del navegador."
+  },
+  "session_label": {
+    "message": "Sesión actual (5h)"
+  },
+  "weekly_label": {
+    "message": "Semanal (7 días)"
+  },
+  "resets_in": {
+    "message": "reinicia en"
+  },
+  "view_quota_btn": {
+    "message": "Ver cuota en claude.ai"
+  },
+  "no_data_hint": {
+    "message": "Sin datos aún. Abre claude.ai para capturar tu cuota."
+  },
+  "updated_ago": {
+    "message": "actualizado"
+  },
+  "used_suffix": {
+    "message": "usado"
+  },
+  "remaining": {
+    "message": "restantes"
+  },
+  "now": {
+    "message": "ahora"
+  },
+  "refresh_title": {
+    "message": "Actualizar ahora"
+  },
+  "donate_btn": {
+    "message": "Apoyar con una donación"
+  },
+  "onboarding_title": {
+    "message": "Bienvenido a Claude Quota Monitor"
+  },
+  "onboarding_subtitle": {
+    "message": "Rastrea tu uso de cuota en Claude.ai directamente en la barra del navegador, sin sorpresas a mitad de conversación."
+  },
+  "onboarding_steps_title": {
+    "message": "Primeros pasos — 4 pasos"
+  },
+  "onboarding_step1_title": {
+    "message": "Abre Claude.ai"
+  },
+  "onboarding_step1_desc": {
+    "message": "Visita claude.ai e inicia sesión. La extensión captura tus datos de cuota automáticamente al cargar la página — sin configuración."
+  },
+  "onboarding_step2_title": {
+    "message": "Revisa el badge en la barra"
+  },
+  "onboarding_step2_desc": {
+    "message": "Aparecerá un badge en el ícono mostrando el uso de la sesión actual (ej. 22%). El color cambia a naranja al 70% y rojo al 90%."
+  },
+  "onboarding_step3_title": {
+    "message": "Haz clic para ver los detalles"
+  },
+  "onboarding_step3_desc": {
+    "message": "Haz clic en el ícono para ver el uso de tu sesión y semanal, el tiempo hasta el reinicio y el botón de actualización manual. Los datos se actualizan automáticamente cada 10 minutos."
+  },
+  "onboarding_cta": {
+    "message": "Abrir Claude.ai"
+  },
+  "onboarding_donate": {
+    "message": "¿Te gusta? Apóyanos con una donación"
+  },
+  "onboarding_footer": {
+    "message": "Gratis y abierto. Sin cuenta, sin seguimiento."
+  },
+  "pill_session": {
+    "message": "Uso de sesión (5h)"
+  },
+  "pill_weekly": {
+    "message": "Uso semanal (7 días)"
+  },
+  "pill_auto_update": {
+    "message": "Actualizaciones automáticas en segundo plano"
+  },
+  "pill_badge": {
+    "message": "Badge en la barra"
+  },
+  "pill_free": {
+    "message": "Gratis"
+  },
+  "onboarding_step4_title": {
+    "message": "Fija la extensión en la barra del navegador"
+  },
+  "weekly_all_models": {
+    "message": "Todos los modelos"
+  },
+  "weekly_design": {
+    "message": "Claude Design"
+  }
+}

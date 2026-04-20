@@ -1,0 +1,251 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #0f0f0f;
+  color: #e8e8e8;
+  width: 280px;
+}
+
+.container {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* ── Header ── */
+header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo { width: 32px; height: 32px; border-radius: 8px; }
+
+h1 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.badge {
+  font-size: 11px;
+  font-weight: 500;
+  background: #1a1a2e;
+  border: 1px solid #3a3a5c;
+  color: #a78bfa;
+  padding: 2px 8px;
+  border-radius: 20px;
+}
+
+/* ── Barras ── */
+.stat-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: #666;
+  margin-bottom: 6px;
+}
+
+.bar-wrapper {
+  width: 100%;
+  height: 10px;
+  background: #222;
+  border-radius: 99px;
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+
+.bar-wrapper--sm { height: 6px; margin-bottom: 4px; }
+
+.bar {
+  height: 100%;
+  border-radius: 99px;
+  background: #2f855a;
+  transition: width 0.4s ease, background-color 0.4s ease;
+  width: 0%;
+}
+
+.bar--sm { height: 100%; }
+.bar.warn { background: #dd6b20; }
+.bar.crit { background: #e53e3e; }
+
+/* ── Meta da barra principal ── */
+.bar-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#pct-text {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+}
+
+.reset-chip {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1px;
+}
+
+.reset-chip .muted { font-size: 10px; }
+
+#reset-text {
+  font-size: 13px;
+  font-weight: 600;
+  color: #a78bfa;
+}
+
+/* ── Semanal ── */
+.weekly-row {
+  background: #1a1a1a;
+  border-radius: 8px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.weekly-row .stat-label { margin-bottom: 8px; }
+
+.weekly-category { display: flex; flex-direction: column; gap: 0; }
+
+.weekly-cat-label {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.weekly-cat-divider {
+  height: 1px;
+  background: #252525;
+  margin: 8px 0;
+}
+
+.weekly-row .bar-meta { margin-top: 2px; }
+
+#weekly-pct-text,
+#weekly-design-pct-text { font-size: 12px; font-weight: 600; color: #ccc; }
+#weekly-reset-text,
+#weekly-design-reset-text { font-size: 11px; }
+
+.bar--design { background: #6366f1; }
+.bar--design.warn { background: #dd6b20; }
+.bar--design.crit { background: #e53e3e; }
+
+/* ── Utilidades ── */
+.muted  { color: #555; font-size: 12px; }
+.small  { font-size: 11px; }
+.right  { text-align: right; }
+
+.hint {
+  font-size: 13px;
+  color: #555;
+  text-align: center;
+  line-height: 1.7;
+  padding: 8px 0;
+}
+
+.hint a { color: #a78bfa; text-decoration: none; }
+.hint a:hover { text-decoration: underline; }
+
+/* ── Footer ── */
+footer {
+  border-top: 1px solid #1a1a1a;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+#refresh-btn {
+  width: 100%;
+  padding: 7px;
+  background: #1a1a2e;
+  border: 1px solid #3a3a5c;
+  border-radius: 8px;
+  color: #a78bfa;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+#refresh-btn:hover { background: #252545; }
+
+#donate-btn {
+  width: 100%;
+  padding: 7px;
+  background: transparent;
+  border: 1px solid #3d1f1f;
+  border-radius: 8px;
+  color: #f87171;
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+#donate-btn svg {
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
+}
+
+#donate-btn:hover {
+  background: #2d1010;
+  border-color: #f87171;
+}
+
+/* ── Linha de última atualização + botão sync ── */
+.update-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 5px;
+  min-height: 20px;
+}
+
+#sync-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  padding: 2px;
+  cursor: pointer;
+  color: #444;
+  border-radius: 4px;
+  transition: color 0.15s;
+  line-height: 0;
+}
+
+#sync-btn svg {
+  width: 13px;
+  height: 13px;
+  transition: transform 0.15s;
+}
+
+#sync-btn:hover { color: #a78bfa; }
+#sync-btn:hover svg { transform: rotate(30deg); }
+
+#sync-btn.spinning svg {
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.hidden { display: none !important; }

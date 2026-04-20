@@ -1,0 +1,101 @@
+{
+  "ext_name": {
+    "message": "Claude কোটা মনিটর"
+  },
+  "ext_description": {
+    "message": "ব্রাউজার টুলবারে সরাসরি আপনার Claude.ai কোটার ব্যবহার দেখুন।"
+  },
+  "session_label": {
+    "message": "বর্তমান সেশন (৫ ঘণ্টা)"
+  },
+  "weekly_label": {
+    "message": "সাপ্তাহিক (৭ দিন)"
+  },
+  "resets_in": {
+    "message": "রিসেট হবে"
+  },
+  "view_quota_btn": {
+    "message": "claude.ai-তে কোটা দেখুন"
+  },
+  "no_data_hint": {
+    "message": "এখনো কোনো ডেটা নেই। কোটা দেখতে claude.ai খুলুন।"
+  },
+  "updated_ago": {
+    "message": "আপডেট হয়েছে"
+  },
+  "used_suffix": {
+    "message": "ব্যবহৃত"
+  },
+  "remaining": {
+    "message": "বাকি"
+  },
+  "now": {
+    "message": "এখনই"
+  },
+  "refresh_title": {
+    "message": "এখনই রিফ্রেশ করুন"
+  },
+  "donate_btn": {
+    "message": "দান দিয়ে সহায়তা করুন"
+  },
+  "onboarding_title": {
+    "message": "Claude Quota Monitor-এ স্বাগতম"
+  },
+  "onboarding_subtitle": {
+    "message": "সরাসরি ব্রাউজার টুলবারে Claude.ai-এর ব্যবহার ট্র্যাক করুন, কথোপকথনের মাঝে আর চমকে যেতে হবে না।"
+  },
+  "onboarding_steps_title": {
+    "message": "শুরু করুন — ৪টি ধাপ"
+  },
+  "onboarding_step1_title": {
+    "message": "Claude.ai খুলুন"
+  },
+  "onboarding_step1_desc": {
+    "message": "claude.ai-তে যান এবং লগ ইন করুন। এক্সটেনশন পেজ লোডে স্বয়ংক্রিয়ভাবে কোটা ডেটা সংগ্রহ করে — কোনো সেটআপ দরকার নেই।"
+  },
+  "onboarding_step2_title": {
+    "message": "টুলবার ব্যাজ দেখুন"
+  },
+  "onboarding_step2_desc": {
+    "message": "এক্সটেনশন আইকনে একটি ব্যাজ দেখাবে যা বর্তমান সেশনের ব্যবহার দেখাবে (যেমন ২২%)। ৭০%-এ কমলা এবং ৯০%-এ লাল হয়।"
+  },
+  "onboarding_step3_title": {
+    "message": "পূর্ণ বিবরণের জন্য ক্লিক করুন"
+  },
+  "onboarding_step3_desc": {
+    "message": "আইকনে ক্লিক করে সেশন ও সাপ্তাহিক ব্যবহার, রিসেট পর্যন্ত বাকি সময় এবং ম্যানুয়াল রিফ্রেশ বাটন দেখুন। ডেটা প্রতি ১০ মিনিটে স্বয়ংক্রিয়ভাবে আপডেট হয়।"
+  },
+  "onboarding_cta": {
+    "message": "Claude.ai খুলুন"
+  },
+  "onboarding_donate": {
+    "message": "পছন্দ হলো? দান দিয়ে সহায়তা করুন"
+  },
+  "onboarding_footer": {
+    "message": "বিনামূল্যে ও উন্মুক্ত। কোনো অ্যাকাউন্ট নেই, কোনো ট্র্যাকিং নেই।"
+  },
+  "pill_session": {
+    "message": "সেশন ব্যবহার (৫ঘ)"
+  },
+  "pill_weekly": {
+    "message": "সাপ্তাহিক ব্যবহার (৭ দিন)"
+  },
+  "pill_auto_update": {
+    "message": "স্বয়ংক্রিয় ব্যাকগ্রাউন্ড আপডেট"
+  },
+  "pill_badge": {
+    "message": "টুলবারে ব্যাজ"
+  },
+  "pill_free": {
+    "message": "বিনামূল্যে"
+  },
+  "onboarding_step4_title": {
+    "message": "টুলবারে এক্সটেনশন পিন করুন"
+  },
+  "weekly_all_models": {
+    "message": "সব মডেল"
+  },
+  "weekly_design": {
+    "message": "Claude Design"
+  }
+}

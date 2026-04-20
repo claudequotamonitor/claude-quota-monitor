@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome to Claude Quota Monitor</title>
+  <link rel="stylesheet" href="onboarding.css"/>
+</head>
+<body>
+
+  <div class="glow glow-tl"></div>
+  <div class="glow glow-br"></div>
+
+  <main class="page">
+
+    <!-- Hero -->
+    <div class="hero">
+      <div class="logo-wrap">
+        <svg width="48" height="48" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="32" height="32" rx="7" fill="#0a0a18"/>
+          <defs>
+            <linearGradient id="lg" x1="6" y1="6" x2="26" y2="26" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#a78bfa"/>
+              <stop offset="100%" stop-color="#c058f6"/>
+            </linearGradient>
+          </defs>
+          <circle cx="16" cy="16" r="10.5" stroke="#2e2a72" stroke-width="3.5" fill="none"
+                  stroke-dasharray="52.5 13.6" stroke-linecap="round" transform="rotate(25 16 16)"/>
+          <circle cx="16" cy="16" r="10.5" stroke="url(#lg)" stroke-width="3.5" fill="none"
+                  stroke-dasharray="34.1 32" stroke-linecap="round" transform="rotate(25 16 16)"/>
+          <circle cx="16" cy="16" r="2" fill="#dcd8f5"/>
+        </svg>
+      </div>
+
+      <h1 data-i18n="onboarding_title">Welcome to <span>Claude Quota</span> Monitor</h1>
+      <p data-i18n="onboarding_subtitle">Track your Claude.ai usage directly in the browser toolbar, so you never get caught off guard mid-conversation.</p>
+
+      <div class="features">
+        <span class="pill" data-i18n="pill_session">Session usage (5h)</span>
+        <span class="pill" data-i18n="pill_weekly">Weekly usage (7 days)</span>
+        <span class="pill" data-i18n="pill_auto_update">Auto background updates</span>
+        <span class="pill" data-i18n="pill_badge">Badge in toolbar</span>
+        <span class="pill" data-i18n="pill_free">Free</span>
+      </div>
+    </div>
+
+    <!-- Steps -->
+    <div class="steps">
+      <p class="steps-title" data-i18n="onboarding_steps_title">Getting started — 3 steps</p>
+
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <h3 data-i18n="onboarding_step1_title">Open Claude.ai</h3>
+          <p data-i18n="onboarding_step1_desc">Visit <code>claude.ai</code> and log in to your account. The extension captures your quota data automatically on page load — no setup required.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <h3 data-i18n="onboarding_step2_title">Check the toolbar badge</h3>
+          <p data-i18n="onboarding_step2_desc">A badge will appear on the extension icon showing your current session usage (e.g. <code>22%</code>). Color changes to orange at 70% and red at 90%.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <h3 data-i18n="onboarding_step3_title">Click for full details</h3>
+          <p data-i18n="onboarding_step3_desc">Click the icon to see your session and weekly usage, remaining time until reset, and a manual refresh button. Data updates automatically every 10 minutes.</p>
+        </div>
+      </div>
+      <div class="step" id="step4">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <h3 data-i18n="onboarding_step4_title">Pin the extension to your toolbar</h3>
+          <p id="step4-desc"></p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CTA -->
+    <div class="cta">
+      <a class="btn-primary" href="https://claude.ai" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+          <polyline points="15 3 21 3 21 9"/>
+          <line x1="10" y1="14" x2="21" y2="3"/>
+        </svg>
+        <span data-i18n="onboarding_cta">Open Claude.ai</span>
+      </a>
+
+      <a class="donate-link" href="https://ko-fi.com/claudaquotamonitor" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor">
+          <path d="M3.172 5.172a4 4 0 0 1 5.656 0L10 6.343l1.172-1.171a4 4 0 1 1 5.656 5.656L10 17.657l-6.828-6.829a4 4 0 0 1 0-5.656z"/>
+        </svg>
+        <span data-i18n="onboarding_donate">Enjoying it? Support with a donation</span>
+      </a>
+    </div>
+
+    <p class="footer" data-i18n="onboarding_footer">Free &amp; open. No account, no tracking.</p>
+
+  </main>
+
+  <script src="onboarding.js"></script>
+</body>
+</html>

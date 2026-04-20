@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+
+# Dev & build tools (internal vibe-code scripts)
+_dev/
+
+# Generated assets
+screenshots/
+*.svg
+*.zip
+
+# Generated images (but NOT extension icons)
+*.png
+!icons/*.png
+icons/*-new.png
+
+# Website files (hosted separately at claudequotamonitor.github.io)
+index.html
+privacy-policy.html
+
+# Backups
+backup-*/
+
+# Misc
+package-lock.json

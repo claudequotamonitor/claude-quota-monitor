@@ -1,0 +1,101 @@
+{
+  "ext_name": {
+    "message": "مراقب حصة Claude"
+  },
+  "ext_description": {
+    "message": "يعرض استخدام حصتك في Claude.ai مباشرةً في شريط أدوات المتصفح."
+  },
+  "session_label": {
+    "message": "الجلسة الحالية (5 ساعات)"
+  },
+  "weekly_label": {
+    "message": "أسبوعي (7 أيام)"
+  },
+  "resets_in": {
+    "message": "يُعاد تعيينه في"
+  },
+  "view_quota_btn": {
+    "message": "عرض الحصة على claude.ai"
+  },
+  "no_data_hint": {
+    "message": "لا توجد بيانات بعد. افتح claude.ai لعرض حصتك."
+  },
+  "updated_ago": {
+    "message": "تم التحديث"
+  },
+  "used_suffix": {
+    "message": "مستخدم"
+  },
+  "remaining": {
+    "message": "متبقي"
+  },
+  "now": {
+    "message": "الآن"
+  },
+  "refresh_title": {
+    "message": "تحديث الآن"
+  },
+  "donate_btn": {
+    "message": "ادعم بتبرع"
+  },
+  "onboarding_title": {
+    "message": "مرحبًا بك في Claude Quota Monitor"
+  },
+  "onboarding_subtitle": {
+    "message": "تتبع استخدام حصتك على Claude.ai مباشرةً في شريط أدوات المتصفح، حتى لا تُفاجأ في منتصف المحادثة."
+  },
+  "onboarding_steps_title": {
+    "message": "البدء — 4 خطوات"
+  },
+  "onboarding_step1_title": {
+    "message": "افتح Claude.ai"
+  },
+  "onboarding_step1_desc": {
+    "message": "زُر claude.ai وسجّل الدخول. تلتقط الإضافة بيانات حصتك تلقائيًا عند تحميل الصفحة — دون أي إعداد."
+  },
+  "onboarding_step2_title": {
+    "message": "تحقق من شارة شريط الأدوات"
+  },
+  "onboarding_step2_desc": {
+    "message": "ستظهر شارة على أيقونة الإضافة تُظهر استخدام الجلسة الحالية (مثلاً 22%). يتغير اللون إلى البرتقالي عند 70% والأحمر عند 90%."
+  },
+  "onboarding_step3_title": {
+    "message": "انقر للاطلاع على التفاصيل الكاملة"
+  },
+  "onboarding_step3_desc": {
+    "message": "انقر على الأيقونة لرؤية استخدام جلستك وأسبوعك، والوقت المتبقي حتى إعادة الضبط، وزر التحديث اليدوي. تتحدث البيانات تلقائيًا كل 10 دقائق."
+  },
+  "onboarding_cta": {
+    "message": "افتح Claude.ai"
+  },
+  "onboarding_donate": {
+    "message": "أعجبك؟ ادعم بتبرع"
+  },
+  "onboarding_footer": {
+    "message": "مجاني ومفتوح. بدون حساب، بدون تتبع."
+  },
+  "pill_session": {
+    "message": "استخدام الجلسة (5 ساعات)"
+  },
+  "pill_weekly": {
+    "message": "الاستخدام الأسبوعي (7 أيام)"
+  },
+  "pill_auto_update": {
+    "message": "تحديثات تلقائية في الخلفية"
+  },
+  "pill_badge": {
+    "message": "شارة في شريط الأدوات"
+  },
+  "pill_free": {
+    "message": "مجاني"
+  },
+  "onboarding_step4_title": {
+    "message": "ثبّت الإضافة في شريط الأدوات"
+  },
+  "weekly_all_models": {
+    "message": "جميع النماذج"
+  },
+  "weekly_design": {
+    "message": "Claude Design"
+  }
+}
