@@ -26,7 +26,7 @@ All notable changes to Claude Quota Monitor are documented here.
 
 ---
 
-## [1.4.1] — 2026-03-XX
+## [1.4.1] — 2026-04-18
 
 ### Added
 - **Onboarding page** — shown automatically on first install, guiding users through setup in 4 steps with browser-specific instructions to pin the extension (Chrome, Brave, Edge, Arc)
@@ -52,7 +52,7 @@ All notable changes to Claude Quota Monitor are documented here.
 
 ---
 
-## [1.3] — 2026-XX-XX
+## [1.3] — 2026-04-17
 
 ### Added
 - Internationalization (i18n) infrastructure using `_locales/` and `chrome.i18n`
@@ -62,7 +62,7 @@ All notable changes to Claude Quota Monitor are documented here.
 
 ---
 
-## [1.2] — 2026-XX-XX
+## [1.2] — 2026-04-17
 
 ### Added
 - Extension icons at all required sizes (16px, 48px, 128px) rendered from SVG source
@@ -74,7 +74,7 @@ All notable changes to Claude Quota Monitor are documented here.
 
 ---
 
-## [1.1] — 2026-XX-XX
+## [1.1] — 2026-04-16
 
 ### Added
 - MutationObserver in content script to detect when Claude finishes a response and trigger an automatic data refresh (~2 seconds after each reply)
@@ -86,7 +86,7 @@ All notable changes to Claude Quota Monitor are documented here.
 
 ---
 
-## [1.0] — 2026-XX-XX
+## [1.0] — 2026-04-15
 
 ### Added
 - Initial working version
