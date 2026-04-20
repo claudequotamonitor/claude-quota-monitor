@@ -2,7 +2,7 @@
 node_modules/
 
 # Dev & build tools (internal vibe-code scripts)
-_dev/
+dev-tools/
 
 # Generated assets
 screenshots/
