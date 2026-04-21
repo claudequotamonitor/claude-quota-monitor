@@ -89,7 +89,8 @@ This extension does not collect, store, or transmit any personal data. See the f
 
 ## Support
 
-- **Ko-fi:** [ko-fi.com/claudequotamonitor](https://ko-fi.com/claudequotamonitor)
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/A0A11Y1RAC)
+
 - **Email:** claudequotamonitor@gmail.com
 
 ## Disclaimer
