@@ -1,10 +1,58 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
+/* ── Theme variables ── */
+:root {
+  --bg:             #0f0f0f;
+  --surface:        #1a1a1a;
+  --surface2:       #252525;
+  --text:           #e8e8e8;
+  --text-bright:    #ffffff;
+  --text-pct:       #ffffff;
+  --muted:          #555;
+  --muted-label:    #666;
+  --border:         #1a1a1a;
+  --border-accent:  #3a3a5c;
+  --badge-bg:       #1a1a2e;
+  --bar-bg:         #222;
+  --btn-bg:         #1a1a2e;
+  --btn-hover:      #252545;
+  --donate-border:  #3d1f1f;
+  --donate-text:    #f87171;
+  --donate-hover:   #2d1010;
+  --icon-idle:      #444;
+  --weekly-text:    #ccc;
+  --hint-text:      #555;
+}
+
+:root[data-theme="light"] {
+  --bg:             #f4f4f8;
+  --surface:        #e8e8f4;
+  --surface2:       #d4d4e8;
+  --text:           #1e1e30;
+  --text-bright:    #0a0a18;
+  --text-pct:       #0a0a18;
+  --muted:          #8888aa;
+  --muted-label:    #7777aa;
+  --border:         #dedee8;
+  --border-accent:  #b0a8e0;
+  --badge-bg:       #ebe8ff;
+  --bar-bg:         #d4d4ec;
+  --btn-bg:         #ebe8ff;
+  --btn-hover:      #d8d2f8;
+  --donate-border:  #f8c0c0;
+  --donate-text:    #dc2626;
+  --donate-hover:   #fff0f0;
+  --icon-idle:      #9999bb;
+  --weekly-text:    #444466;
+  --hint-text:      #8888aa;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  background: #0f0f0f;
-  color: #e8e8e8;
+  background: var(--bg);
+  color: var(--text);
   width: 280px;
+  transition: background 0.2s, color 0.2s;
 }
 
 .container {
@@ -25,25 +73,56 @@ header {
 
 .header-text { flex: 1; min-width: 0; }
 
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
 .header-bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 4px;
 }
 
 h1 {
   font-size: 15px;
   font-weight: 600;
-  color: #fff;
+  color: var(--text-bright);
   line-height: 1;
 }
 
+/* ── Theme toggle ── */
+#theme-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  padding: 1px;
+  cursor: pointer;
+  color: var(--icon-idle);
+  border-radius: 4px;
+  line-height: 0;
+  transition: color 0.15s;
+}
+
+#theme-btn svg { width: 13px; height: 13px; }
+#theme-btn:hover { color: #a78bfa; }
+
+/* Show sun in dark mode (to switch to light), moon in light mode */
+#theme-btn .icon-moon { display: block; }
+#theme-btn .icon-sun  { display: none;  }
+[data-theme="light"] #theme-btn .icon-moon { display: none;  }
+[data-theme="light"] #theme-btn .icon-sun  { display: block; }
+
+/* ── Site link ── */
 #site-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #444;
+  color: var(--icon-idle);
   border-radius: 4px;
   padding: 1px;
   line-height: 0;
@@ -51,18 +130,15 @@ h1 {
   transition: color 0.15s;
 }
 
-#site-btn svg {
-  width: 13px;
-  height: 13px;
-}
-
+#site-btn svg { width: 13px; height: 13px; }
 #site-btn:hover { color: #a78bfa; }
 
+/* ── Plan badge ── */
 .badge {
   font-size: 11px;
   font-weight: 500;
-  background: #1a1a2e;
-  border: 1px solid #3a3a5c;
+  background: var(--badge-bg);
+  border: 1px solid var(--border-accent);
   color: #a78bfa;
   padding: 2px 8px;
   border-radius: 20px;
@@ -73,14 +149,14 @@ h1 {
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.6px;
-  color: #666;
+  color: var(--muted-label);
   margin-bottom: 6px;
 }
 
 .bar-wrapper {
   width: 100%;
   height: 10px;
-  background: #222;
+  background: var(--bar-bg);
   border-radius: 99px;
   overflow: hidden;
   margin-bottom: 6px;
@@ -110,7 +186,7 @@ h1 {
 #pct-text {
   font-size: 24px;
   font-weight: 700;
-  color: #fff;
+  color: var(--text-pct);
   line-height: 1;
 }
 
@@ -131,7 +207,7 @@ h1 {
 
 /* ── Semanal ── */
 .weekly-row {
-  background: #1a1a1a;
+  background: var(--surface);
   border-radius: 8px;
   padding: 10px 12px;
   display: flex;
@@ -148,20 +224,20 @@ h1 {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  color: #555;
+  color: var(--muted);
   margin-bottom: 5px;
 }
 
 .weekly-cat-divider {
   height: 1px;
-  background: #252525;
+  background: var(--surface2);
   margin: 8px 0;
 }
 
 .weekly-row .bar-meta { margin-top: 2px; }
 
 #weekly-pct-text,
-#weekly-design-pct-text { font-size: 12px; font-weight: 600; color: #ccc; }
+#weekly-design-pct-text { font-size: 12px; font-weight: 600; color: var(--weekly-text); }
 #weekly-reset-text,
 #weekly-design-reset-text { font-size: 11px; }
 
@@ -170,13 +246,13 @@ h1 {
 .bar--design.crit { background: #e53e3e; }
 
 /* ── Utilidades ── */
-.muted  { color: #555; font-size: 12px; }
+.muted  { color: var(--muted); font-size: 12px; }
 .small  { font-size: 11px; }
 .right  { text-align: right; }
 
 .hint {
   font-size: 13px;
-  color: #555;
+  color: var(--hint-text);
   text-align: center;
   line-height: 1.7;
   padding: 8px 0;
@@ -187,7 +263,7 @@ h1 {
 
 /* ── Footer ── */
 footer {
-  border-top: 1px solid #1a1a1a;
+  border-top: 1px solid var(--border);
   padding-top: 10px;
   display: flex;
   flex-direction: column;
@@ -197,8 +273,8 @@ footer {
 #refresh-btn {
   width: 100%;
   padding: 7px;
-  background: #1a1a2e;
-  border: 1px solid #3a3a5c;
+  background: var(--btn-bg);
+  border: 1px solid var(--border-accent);
   border-radius: 8px;
   color: #a78bfa;
   font-size: 12px;
@@ -206,15 +282,15 @@ footer {
   transition: background 0.15s;
 }
 
-#refresh-btn:hover { background: #252545; }
+#refresh-btn:hover { background: var(--btn-hover); }
 
 #donate-btn {
   width: 100%;
   padding: 7px;
   background: transparent;
-  border: 1px solid #3d1f1f;
+  border: 1px solid var(--donate-border);
   border-radius: 8px;
-  color: #f87171;
+  color: var(--donate-text);
   font-size: 12px;
   cursor: pointer;
   display: flex;
@@ -224,15 +300,11 @@ footer {
   transition: background 0.15s, border-color 0.15s;
 }
 
-#donate-btn svg {
-  width: 13px;
-  height: 13px;
-  flex-shrink: 0;
-}
+#donate-btn svg { width: 13px; height: 13px; flex-shrink: 0; }
 
 #donate-btn:hover {
-  background: #2d1010;
-  border-color: #f87171;
+  background: var(--donate-hover);
+  border-color: var(--donate-text);
 }
 
 /* ── Linha de última atualização + botão sync ── */
@@ -252,7 +324,7 @@ footer {
   border: none;
   padding: 2px;
   cursor: pointer;
-  color: #444;
+  color: var(--icon-idle);
   border-radius: 4px;
   transition: color 0.15s;
   line-height: 0;

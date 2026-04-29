@@ -1,3 +1,29 @@
+/* ── Theme ── */
+function applyTheme(theme) {
+  if (theme === 'light') {
+    document.documentElement.setAttribute('data-theme', 'light');
+  } else {
+    document.documentElement.removeAttribute('data-theme');
+  }
+}
+
+// Load stored theme, fallback to OS preference
+chrome.storage.local.get('theme', ({ theme }) => {
+  if (theme) {
+    applyTheme(theme);
+  } else {
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    applyTheme(prefersDark ? 'dark' : 'light');
+  }
+});
+
+document.getElementById('theme-btn').addEventListener('click', () => {
+  const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+  const next = isLight ? 'dark' : 'light';
+  applyTheme(next);
+  chrome.storage.local.set({ theme: next });
+});
+
 /* ── i18n helper ── */
 const t = (key) => chrome.i18n.getMessage(key) || key;
 
