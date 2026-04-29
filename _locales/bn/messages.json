@@ -109,5 +109,11 @@
   },
   "visit_website": {
     "message": "ওয়েবসাইট দেখুন"
+  },
+  "theme_to_light": {
+    "message": "লাইট মোডে যান"
+  },
+  "theme_to_dark": {
+    "message": "ডার্ক মোডে যান"
   }
 }

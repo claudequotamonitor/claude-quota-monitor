@@ -109,5 +109,11 @@
   },
   "visit_website": {
     "message": "Visitar site"
+  },
+  "theme_to_light": {
+    "message": "Mudar para tema claro"
+  },
+  "theme_to_dark": {
+    "message": "Mudar para tema escuro"
   }
 }

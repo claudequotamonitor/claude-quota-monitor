@@ -109,5 +109,11 @@
   },
   "visit_website": {
     "message": "زيارة الموقع"
+  },
+  "theme_to_light": {
+    "message": "التبديل إلى الوضع الفاتح"
+  },
+  "theme_to_dark": {
+    "message": "التبديل إلى الوضع الداكن"
   }
 }

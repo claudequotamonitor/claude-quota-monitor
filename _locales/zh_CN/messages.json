@@ -109,5 +109,11 @@
   },
   "visit_website": {
     "message": "访问网站"
+  },
+  "theme_to_light": {
+    "message": "切换到浅色模式"
+  },
+  "theme_to_dark": {
+    "message": "切换到深色模式"
   }
 }

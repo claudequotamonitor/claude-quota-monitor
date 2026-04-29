@@ -109,5 +109,11 @@
   },
   "visit_website": {
     "message": "Посетить сайт"
+  },
+  "theme_to_light": {
+    "message": "Переключить на светлую тему"
+  },
+  "theme_to_dark": {
+    "message": "Переключить на тёмную тему"
   }
 }

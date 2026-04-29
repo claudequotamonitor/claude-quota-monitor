@@ -98,8 +98,22 @@
   "weekly_design": {
     "message": "Claude Design"
   },
-  "time_days":  { "message": "d" },
-  "time_hours": { "message": "h" },
-  "time_mins":  { "message": "m" },
-  "visit_website": { "message": "Visit website" }
+  "time_days": {
+    "message": "d"
+  },
+  "time_hours": {
+    "message": "h"
+  },
+  "time_mins": {
+    "message": "m"
+  },
+  "visit_website": {
+    "message": "Visit website"
+  },
+  "theme_to_light": {
+    "message": "Switch to light mode"
+  },
+  "theme_to_dark": {
+    "message": "Switch to dark mode"
+  }
 }

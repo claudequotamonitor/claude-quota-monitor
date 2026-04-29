@@ -109,5 +109,11 @@
   },
   "visit_website": {
     "message": "Kunjungi situs web"
+  },
+  "theme_to_light": {
+    "message": "Beralih ke mode terang"
+  },
+  "theme_to_dark": {
+    "message": "Beralih ke mode gelap"
   }
 }

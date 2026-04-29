@@ -109,5 +109,11 @@
   },
   "visit_website": {
     "message": "वेबसाइट देखें"
+  },
+  "theme_to_light": {
+    "message": "लाइट मोड में जाएं"
+  },
+  "theme_to_dark": {
+    "message": "डार्क मोड में जाएं"
   }
 }

@@ -1,9 +1,12 @@
 /* ── Theme ── */
 function applyTheme(theme) {
+  const btn = document.getElementById('theme-btn');
   if (theme === 'light') {
     document.documentElement.setAttribute('data-theme', 'light');
+    if (btn) btn.title = chrome.i18n.getMessage('theme_to_dark') || 'Switch to dark mode';
   } else {
     document.documentElement.removeAttribute('data-theme');
+    if (btn) btn.title = chrome.i18n.getMessage('theme_to_light') || 'Switch to light mode';
   }
 }
 
