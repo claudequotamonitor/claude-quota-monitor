@@ -321,7 +321,7 @@ function applyLang(lang) {
 /* ── Build language switcher ── */
 function buildSwitcher() {
   const container = document.getElementById('ob-lang-switcher');
-  if (!container) return;
+  if (!container) { console.warn('[CQM] ob-lang-switcher not found'); return; }
 
   if (!document.getElementById('ob-i18n-css')) {
     const style = document.createElement('style');
