@@ -68,6 +68,17 @@ chrome.runtime.onInstalled.addListener((details) => {
 });
 
 /* ── Badge ── */
+function buildTitle(u) {
+  if (!u || u.percent === undefined) return 'Claude Quota Monitor';
+  const s = chrome.i18n.getMessage('session_label') || 'Session';
+  const w = chrome.i18n.getMessage('weekly_label')  || 'Weekly';
+  const d = chrome.i18n.getMessage('weekly_design') || 'Claude Design';
+  let title = `${s}: ${u.percent}%`;
+  if (u.weeklyPercent       !== undefined) title += ` · ${w}: ${u.weeklyPercent}%`;
+  if (u.designWeeklyPercent !== undefined) title += ` · ${d}: ${u.designWeeklyPercent}%`;
+  return title;
+}
+
 function updateBadge(u) {
   if (!u?.percent === undefined) return;
   const pct = u.percent;
@@ -75,6 +86,7 @@ function updateBadge(u) {
   chrome.action.setBadgeBackgroundColor({
     color: pct >= 90 ? '#e53e3e' : pct >= 70 ? '#dd6b20' : '#2f855a'
   });
+  chrome.action.setTitle({ title: buildTitle(u) });
 }
 
 chrome.storage.onChanged.addListener((changes) => {
