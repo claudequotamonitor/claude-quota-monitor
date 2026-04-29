@@ -4,6 +4,24 @@ All notable changes to Claude Quota Monitor are documented here.
 
 ---
 
+## [1.6] — 2026-04-29
+
+### Added
+- **Dark / light theme toggle** — button in the popup header (🌙 / ☀️) switches between themes; preference is persisted via `chrome.storage.local` and falls back to `prefers-color-scheme` on first launch
+- **Website link** — globe icon in the popup header links to claudequotamonitor.github.io
+- **Language switcher on the onboarding page** — same dropdown experience as the website, with preference stored in `localStorage`
+
+### Improved
+- **Reset timer shows days** — times ≥ 24 h are now formatted as `Xd Yh Zm` instead of a raw hour count (e.g. `6d 17h 36m` instead of `161h 36m`)
+- **Badge tooltip** — hovering the extension icon now shows a concise usage summary: *Session · Weekly · Claude Design* percentages
+- **Localized time units** — day / hour / minute abbreviations adapted for all 10 supported languages
+
+### Localization
+- New strings (`time_days`, `time_hours`, `time_mins`, `visit_website`, `theme_to_light`, `theme_to_dark`) fully translated in all 10 languages
+- Onboarding page now has a standalone JS-based i18n system (independent of `chrome.i18n`) enabling the in-page language switcher; title gradient on *Claude Quota* restored
+
+---
+
 ## [1.5] — 2026-04-19
 
 ### Added
