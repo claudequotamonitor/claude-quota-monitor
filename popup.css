@@ -23,13 +23,40 @@ header {
 
 .logo { width: 32px; height: 32px; border-radius: 8px; }
 
+.header-text { flex: 1; min-width: 0; }
+
+.header-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4px;
+}
+
 h1 {
   font-size: 15px;
   font-weight: 600;
   color: #fff;
   line-height: 1;
-  margin-bottom: 4px;
 }
+
+#site-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #444;
+  border-radius: 4px;
+  padding: 1px;
+  line-height: 0;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+#site-btn svg {
+  width: 13px;
+  height: 13px;
+}
+
+#site-btn:hover { color: #a78bfa; }
 
 .badge {
   font-size: 11px;
@@ -212,29 +239,10 @@ footer {
 .update-row {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: 5px;
   min-height: 20px;
 }
-
-#site-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #444;
-  border-radius: 4px;
-  padding: 2px;
-  line-height: 0;
-  text-decoration: none;
-  transition: color 0.15s;
-}
-
-#site-btn svg {
-  width: 13px;
-  height: 13px;
-}
-
-#site-btn:hover { color: #a78bfa; }
 
 #sync-btn {
   display: flex;
