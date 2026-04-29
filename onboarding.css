@@ -231,3 +231,14 @@ body::before {
   color: #333;
   text-align: center;
 }
+
+.site-link {
+  font-size: 12px;
+  color: #3a3a5c;
+  text-decoration: none;
+  text-align: center;
+  transition: color .15s;
+  margin-top: -40px;
+}
+
+.site-link:hover { color: var(--purple); }

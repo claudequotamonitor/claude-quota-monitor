@@ -151,6 +151,11 @@ document.addEventListener('click', (e) => {
   }
 });
 
+document.getElementById('site-btn').addEventListener('click', (e) => {
+  e.preventDefault();
+  chrome.tabs.create({ url: 'https://claudequotamonitor.github.io' });
+});
+
 const syncBtn = document.getElementById('sync-btn');
 syncBtn.addEventListener('click', () => {
   syncBtn.classList.add('spinning');

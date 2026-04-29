@@ -97,9 +97,17 @@
   },
   "weekly_design": {
     "message": "Claude Design"
+  },
+  "time_days": {
+    "message": "d"
+  },
+  "time_hours": {
+    "message": "h"
+  },
+  "time_mins": {
+    "message": "m"
+  },
+  "visit_website": {
+    "message": "Visitar sitio web"
   }
-,
-  "time_days":  { "message": "d" },
-  "time_hours": { "message": "h" },
-  "time_mins":  { "message": "m" }
 }
