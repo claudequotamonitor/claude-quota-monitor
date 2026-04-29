@@ -5,7 +5,7 @@
  */
 
 // ── Cópia fiel de fmtReset de popup.js ──────────────────────────────────────
-const t = (key) => key; // retorna a chave como fallback (suficiente para 'now')
+const t = (key) => ({ time_days: 'd', time_hours: 'h', time_mins: 'm', now: 'now' }[key] || key);
 
 function fmtReset(isoOrMs) {
   if (!isoOrMs) return '—';
@@ -19,9 +19,10 @@ function fmtReset(isoOrMs) {
   const d = Math.floor(totalMin / 1_440);
   const h = Math.floor((totalMin % 1_440) / 60);
   const m = totalMin % 60;
-  if (d > 0) return `${d}d ${h}h ${m}m`;
-  if (h > 0) return `${h}h ${m}m`;
-  return `${m}m`;
+  const D = t('time_days'), H = t('time_hours'), M = t('time_mins');
+  if (d > 0) return `${d}${D} ${h}${H} ${m}${M}`;
+  if (h > 0) return `${h}${H} ${m}${M}`;
+  return `${m}${M}`;
 }
 // ────────────────────────────────────────────────────────────────────────────
 

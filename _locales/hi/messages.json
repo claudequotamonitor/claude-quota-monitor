@@ -98,4 +98,8 @@
   "weekly_design": {
     "message": "Claude Design"
   }
+,
+  "time_days":  { "message": "दि" },
+  "time_hours": { "message": "घं" },
+  "time_mins":  { "message": "मि" }
 }

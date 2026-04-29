@@ -98,4 +98,8 @@
   "weekly_design": {
     "message": "Claude Design"
   }
+,
+  "time_days":  { "message": "д" },
+  "time_hours": { "message": "ч" },
+  "time_mins":  { "message": "мин" }
 }
