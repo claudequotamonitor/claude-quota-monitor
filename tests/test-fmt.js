@@ -15,9 +15,13 @@ function fmtReset(isoOrMs) {
   if (!ts || isNaN(ts)) return String(isoOrMs);
   const diff = ts - Date.now();
   if (diff <= 0) return t('now');
-  const h = Math.floor(diff / 3_600_000);
-  const m = Math.floor((diff % 3_600_000) / 60_000);
-  return h > 0 ? `${h}h ${m}m` : `${m}m`;
+  const totalMin = Math.floor(diff / 60_000);
+  const d = Math.floor(totalMin / 1_440);
+  const h = Math.floor((totalMin % 1_440) / 60);
+  const m = totalMin % 60;
+  if (d > 0) return `${d}d ${h}h ${m}m`;
+  if (h > 0) return `${h}h ${m}m`;
+  return `${m}m`;
 }
 // ────────────────────────────────────────────────────────────────────────────
 
@@ -27,12 +31,12 @@ module.exports = async function(describe) {
     // Adiciona 5s de margem para compensar o drift de execução
     const future = (ms) => new Date(Date.now() + ms + 5_000).toISOString();
     const near   = (result, expected) => {
-      // Aceita ±1 min de diferença (drift natural do teste)
-      const [eh, em] = expected.split(/[h m]+/).map(Number);
-      const [rh, rm] = result.split(/[h m]+/).map(Number);
-      const expMin = (eh || 0) * 60 + (em || 0);
-      const gotMin = (rh || 0) * 60 + (rm || 0);
-      return Math.abs(expMin - gotMin) <= 1;
+      // Converte "Xd Yh Zm" ou "Yh Zm" ou "Zm" em minutos totais — aceita ±1 min de drift
+      const toMin = (s) => {
+        const dM = s.match(/(\d+)d/); const hM = s.match(/(\d+)h/); const mM = s.match(/(\d+)m/);
+        return (dM ? +dM[1] * 1_440 : 0) + (hM ? +hM[1] * 60 : 0) + (mM ? +mM[1] : 0);
+      };
+      return Math.abs(toMin(result) - toMin(expected)) <= 1;
     };
 
     const r1 = fmtReset(future(2 * 3_600_000 + 30 * 60_000));
@@ -55,6 +59,16 @@ module.exports = async function(describe) {
 
     const r7 = fmtReset(new Date(Date.now() + 30_000).toISOString());
     assert(r7 === '0m', `< 1 min → "${r7}"`);
+
+    // Casos com dias (>= 24h)
+    const r8 = fmtReset(future(161 * 3_600_000 + 36 * 60_000));
+    assert(near(r8, '6d 17h 36m'), `161h36m → "${r8}" (expected ~6d 17h 36m)`);
+
+    const r9 = fmtReset(future(24 * 3_600_000));
+    assert(near(r9, '1d 0h 0m'), `exactly 24h → "${r9}" (expected ~1d 0h 0m)`);
+
+    const r10 = fmtReset(future(48 * 3_600_000 + 30 * 60_000));
+    assert(near(r10, '2d 0h 30m'), `48h30m → "${r10}" (expected ~2d 0h 30m)`);
   });
 
 };
