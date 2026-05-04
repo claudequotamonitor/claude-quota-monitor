@@ -115,5 +115,23 @@
   },
   "theme_to_dark": {
     "message": "Switch to dark mode"
+  },
+  "review_prompt": {
+    "message": "Enjoying Claude Quota Monitor?"
+  },
+  "review_rate": {
+    "message": "Rate now"
+  },
+  "review_later": {
+    "message": "Maybe later"
+  },
+  "review_never": {
+    "message": "Don't remind me"
+  },
+  "review_star_label": {
+    "message": "Rate on Chrome Web Store"
+  },
+  "review_star_title": {
+    "message": "Rate on Chrome Web Store"
   }
 }

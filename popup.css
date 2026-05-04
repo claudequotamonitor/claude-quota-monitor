@@ -347,4 +347,135 @@ footer {
   to { transform: rotate(360deg); }
 }
 
+/* ── Review chip (inverted theme) ── */
+/* Dark theme → chip uses light background */
+#review-chip {
+  background: #ede8ff;
+  border: 1px solid rgba(167, 139, 250, 0.4);
+  border-radius: 8px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#review-chip p {
+  font-size: 12px;
+  font-weight: 500;
+  color: #0a0a18;
+  text-align: center;
+}
+
+/* Light theme → chip uses dark background */
+[data-theme="light"] #review-chip {
+  background: #0f0f1a;
+  border-color: rgba(167, 139, 250, 0.4);
+}
+
+[data-theme="light"] #review-chip p {
+  color: #e8e8f0;
+}
+
+.review-actions {
+  display: flex;
+  gap: 5px;
+}
+
+.review-actions button {
+  flex: 1;
+  font-size: 10px;
+  padding: 5px 3px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s, border-color 0.15s;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Chip buttons — dark theme (chip is light) */
+#review-btn-rate {
+  background: #a78bfa;
+  border: 1px solid #7c5cdb;
+  color: #ffffff;
+}
+#review-btn-rate:hover { background: #9370f0; }
+
+#review-btn-later,
+#review-btn-never {
+  background: transparent;
+  border: 1px solid rgba(10, 10, 24, 0.2);
+  color: #444;
+}
+#review-btn-later:hover,
+#review-btn-never:hover { border-color: rgba(10, 10, 24, 0.4); }
+
+/* Chip buttons — light theme (chip is dark) */
+[data-theme="light"] #review-btn-rate {
+  background: #a78bfa;
+  border: 1px solid #7c5cdb;
+  color: #ffffff;
+}
+[data-theme="light"] #review-btn-rate:hover { background: #9370f0; }
+
+[data-theme="light"] #review-btn-later,
+[data-theme="light"] #review-btn-never {
+  background: transparent;
+  border: 1px solid rgba(232, 232, 240, 0.2);
+  color: #aaa;
+}
+[data-theme="light"] #review-btn-later:hover,
+[data-theme="light"] #review-btn-never:hover { border-color: rgba(232, 232, 240, 0.4); }
+
+/* ── Review star button + X dismiss ── */
+.review-star-wrap {
+  position: relative;
+}
+
+#review-dismiss-btn {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--muted);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border-radius: 3px;
+  transition: color 0.15s;
+}
+#review-dismiss-btn svg { width: 10px; height: 10px; }
+#review-dismiss-btn:hover { color: var(--text); }
+.review-star-wrap:hover #review-dismiss-btn { display: flex; }
+
+#review-star-btn {
+  width: 100%;
+  padding: 7px;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--muted);
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-family: inherit;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+#review-star-btn svg { width: 12px; height: 12px; flex-shrink: 0; }
+#review-star-btn:hover {
+  color: #f6c90e;
+  border-color: rgba(246, 201, 14, 0.5);
+  background: rgba(246, 201, 14, 0.05);
+}
+
 .hidden { display: none !important; }

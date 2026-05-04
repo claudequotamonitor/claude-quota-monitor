@@ -115,5 +115,23 @@
   },
   "theme_to_dark": {
     "message": "التبديل إلى الوضع الداكن"
+  },
+  "review_prompt": {
+    "message": "هل تستمتع بـ Claude Quota Monitor؟"
+  },
+  "review_rate": {
+    "message": "قيّم الآن"
+  },
+  "review_later": {
+    "message": "ربما لاحقاً"
+  },
+  "review_never": {
+    "message": "لا تذكّرني"
+  },
+  "review_star_label": {
+    "message": "التقييم على Chrome Web Store"
+  },
+  "review_star_title": {
+    "message": "التقييم على Chrome Web Store"
   }
 }

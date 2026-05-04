@@ -115,5 +115,23 @@
   },
   "theme_to_dark": {
     "message": "Переключить на тёмную тему"
+  },
+  "review_prompt": {
+    "message": "Нравится Claude Quota Monitor?"
+  },
+  "review_rate": {
+    "message": "Оценить сейчас"
+  },
+  "review_later": {
+    "message": "Может быть позже"
+  },
+  "review_never": {
+    "message": "Не напоминать"
+  },
+  "review_star_label": {
+    "message": "Оценить в Chrome Web Store"
+  },
+  "review_star_title": {
+    "message": "Оценить в Chrome Web Store"
   }
 }

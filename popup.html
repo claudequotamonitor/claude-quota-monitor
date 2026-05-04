@@ -64,6 +64,17 @@
     </header>
 
     <section id="data-section" class="hidden">
+
+      <!-- Review chip -->
+      <div id="review-chip" class="hidden">
+        <p data-i18n="review_prompt"></p>
+        <div class="review-actions">
+          <button id="review-btn-rate"  data-i18n="review_rate"></button>
+          <button id="review-btn-later" data-i18n="review_later"></button>
+          <button id="review-btn-never" data-i18n="review_never"></button>
+        </div>
+      </div>
+
       <!-- Sessão (5h) -->
       <div class="stat-label" data-i18n="session_label"></div>
       <div class="bar-wrapper">
@@ -126,6 +137,19 @@
 
     <footer>
       <button id="refresh-btn" data-i18n="view_quota_btn"></button>
+      <div class="review-star-wrap">
+        <button id="review-star-btn">
+          <svg viewBox="0 0 18 18" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 1.5l2.06 4.18 4.61.67-3.34 3.25.79 4.6L9 11.77l-4.12 2.23.79-4.6L2.33 6.35l4.61-.67z"/>
+          </svg>
+          <span data-i18n="review_star_label"></span>
+        </button>
+        <button id="review-dismiss-btn" data-i18n-title="review_never">
+          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="2" y1="2" x2="10" y2="10"/><line x1="10" y1="2" x2="2" y2="10"/>
+          </svg>
+        </button>
+      </div>
       <button id="donate-btn">
         <svg viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
           <path d="M3.172 5.172a4 4 0 0 1 5.656 0L10 6.343l1.172-1.171a4 4 0 1 1 5.656 5.656L10 17.657l-6.828-6.829a4 4 0 0 1 0-5.656z"/>

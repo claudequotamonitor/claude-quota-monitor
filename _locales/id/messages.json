@@ -115,5 +115,23 @@
   },
   "theme_to_dark": {
     "message": "Beralih ke mode gelap"
+  },
+  "review_prompt": {
+    "message": "Menikmati Claude Quota Monitor?"
+  },
+  "review_rate": {
+    "message": "Beri nilai sekarang"
+  },
+  "review_later": {
+    "message": "Mungkin nanti"
+  },
+  "review_never": {
+    "message": "Jangan ingatkan lagi"
+  },
+  "review_star_label": {
+    "message": "Beri nilai di Chrome Web Store"
+  },
+  "review_star_title": {
+    "message": "Beri nilai di Chrome Web Store"
   }
 }

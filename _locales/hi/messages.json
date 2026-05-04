@@ -115,5 +115,23 @@
   },
   "theme_to_dark": {
     "message": "डार्क मोड में जाएं"
+  },
+  "review_prompt": {
+    "message": "Claude Quota Monitor पसंद आ रहा है?"
+  },
+  "review_rate": {
+    "message": "अभी रेट करें"
+  },
+  "review_later": {
+    "message": "शायद बाद में"
+  },
+  "review_never": {
+    "message": "याद मत दिलाओ"
+  },
+  "review_star_label": {
+    "message": "Chrome Web Store पर रेट करें"
+  },
+  "review_star_title": {
+    "message": "Chrome Web Store पर रेट करें"
   }
 }

@@ -4,6 +4,19 @@ All notable changes to Claude Quota Monitor are documented here.
 
 ---
 
+## [1.7] — 2026-05-04
+
+### Added
+- **Review reminder** — after 10 popup opens, a chip appears prompting the user to rate the extension on the Chrome Web Store, with three options: *Rate now*, *Maybe later* (snoozes by 20 opens), *Don't remind me*
+- **Star rating button** — persistent shortcut in the popup footer to open the Chrome Web Store review page directly, with an ×-dismiss button visible on hover
+- **Inverted theme on review chip** — chip uses a light background in dark mode and a dark background in light mode, making it visually prominent in both themes
+- **Independent dismiss logic** — dismissing the star button (×) and the chip ("Don't remind me") are tracked separately via `starDismissed` and `reviewState` storage keys; "Rate now" marks both as done
+
+### Localization
+- New strings (`review_prompt`, `review_rate`, `review_later`, `review_never`, `review_star_label`, `review_star_title`) fully translated in all 10 languages
+
+---
+
 ## [1.6] — 2026-04-29
 
 ### Added

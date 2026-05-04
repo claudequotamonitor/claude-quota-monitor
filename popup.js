@@ -185,6 +185,77 @@ document.getElementById('site-btn').addEventListener('click', (e) => {
   chrome.tabs.create({ url: 'https://claudequotamonitor.github.io' });
 });
 
+/* ── Review / Rating ── */
+const CWS_REVIEW_URL          = 'https://chromewebstore.google.com/detail/claude-quota-monitor/gpeogkjjkpmdjgggeaegmnmlmikgkjjm/reviews';
+const REVIEW_FIRST_THRESHOLD  = 10;
+const REVIEW_SNOOZE_INCREMENT = 20;
+
+(function initReview() {
+  chrome.storage.local.get(['reviewState', 'openCount', 'snoozeThreshold', 'starDismissed'], (data) => {
+    const state          = data.reviewState  || 'pending';
+    const starDismissed  = data.starDismissed || false;
+    const newCount       = (data.openCount   || 0) + 1;
+    const threshold      = data.snoozeThreshold || REVIEW_FIRST_THRESHOLD;
+
+    chrome.storage.local.set({ openCount: newCount });
+
+    // Star button: hide when rated, star dismissed, or chip permanently dismissed
+    if (state === 'done' || starDismissed) {
+      document.getElementById('review-star-btn').closest('.review-star-wrap').classList.add('hidden');
+    }
+
+    // Chip: show when threshold reached and chip not dismissed/done
+    if ((state === 'pending' || state === 'snoozed') && newCount >= threshold) {
+      document.getElementById('review-chip').classList.remove('hidden');
+    }
+  });
+})();
+
+function openReviewPage() {
+  chrome.tabs.create({ url: CWS_REVIEW_URL });
+}
+
+function hideStarBtn() {
+  document.getElementById('review-star-btn').closest('.review-star-wrap').classList.add('hidden');
+}
+
+document.getElementById('review-btn-rate').addEventListener('click', () => {
+  openReviewPage();
+  // Marks both as done — chip and star both go away
+  chrome.storage.local.set({ reviewState: 'done', starDismissed: true });
+  document.getElementById('review-chip').classList.add('hidden');
+  hideStarBtn();
+});
+
+document.getElementById('review-btn-later').addEventListener('click', () => {
+  chrome.storage.local.get(['openCount'], (data) => {
+    const newThreshold = (data.openCount || 0) + REVIEW_SNOOZE_INCREMENT;
+    chrome.storage.local.set({ reviewState: 'snoozed', snoozeThreshold: newThreshold });
+  });
+  // Only hides chip — star is unaffected
+  document.getElementById('review-chip').classList.add('hidden');
+});
+
+document.getElementById('review-btn-never').addEventListener('click', () => {
+  // Only dismisses chip — star is unaffected
+  chrome.storage.local.set({ reviewState: 'dismissed' });
+  document.getElementById('review-chip').classList.add('hidden');
+});
+
+document.getElementById('review-dismiss-btn').addEventListener('click', () => {
+  // Only dismisses star — chip state is unaffected
+  chrome.storage.local.set({ starDismissed: true });
+  hideStarBtn();
+});
+
+document.getElementById('review-star-btn').addEventListener('click', () => {
+  openReviewPage();
+  // Marks both as done — chip and star both go away
+  chrome.storage.local.set({ reviewState: 'done', starDismissed: true });
+  document.getElementById('review-chip').classList.add('hidden');
+  hideStarBtn();
+});
+
 const syncBtn = document.getElementById('sync-btn');
 syncBtn.addEventListener('click', () => {
   syncBtn.classList.add('spinning');
