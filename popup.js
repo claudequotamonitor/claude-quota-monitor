@@ -256,6 +256,21 @@ document.getElementById('site-btn').addEventListener('click', (e) => {
   chrome.tabs.create({ url: 'https://claudequotamonitor.github.io' });
 });
 
+/* ── Créditos de uso: recolhível ── */
+(function initExtraUsageToggle() {
+  chrome.storage.local.get('extraUsageCollapsed', ({ extraUsageCollapsed }) => {
+    if (extraUsageCollapsed) {
+      document.getElementById('extra-usage-row').classList.add('collapsed');
+    }
+  });
+})();
+
+document.getElementById('extra-usage-toggle').addEventListener('click', () => {
+  const row = document.getElementById('extra-usage-row');
+  const collapsed = row.classList.toggle('collapsed');
+  chrome.storage.local.set({ extraUsageCollapsed: collapsed });
+});
+
 /* ── Review / Rating ── */
 const CWS_REVIEW_URL          = 'https://chromewebstore.google.com/detail/claude-quota-monitor/gpeogkjjkpmdjgggeaegmnmlmikgkjjm/reviews';
 const REVIEW_FIRST_THRESHOLD  = 10;

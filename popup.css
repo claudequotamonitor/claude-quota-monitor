@@ -258,6 +258,37 @@ h1 {
 #extra-usage-amount-text { font-size: 12px; font-weight: 600; color: var(--weekly-text); }
 #extra-usage-limit-text { font-size: 11px; }
 
+/* ── Créditos de uso — espaçamento e recolhível ── */
+#extra-usage-row { margin-top: 4px; }
+
+.extra-usage-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  margin-bottom: 6px;
+}
+
+#extra-usage-chevron {
+  width: 11px;
+  height: 11px;
+  color: var(--muted);
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+#extra-usage-row.collapsed #extra-usage-chevron {
+  transform: rotate(-90deg);
+}
+
+#extra-usage-row.collapsed #extra-usage-body {
+  display: none;
+}
+
 /* ── Utilidades ── */
 .muted  { color: var(--muted); font-size: 12px; }
 .small  { font-size: 11px; }

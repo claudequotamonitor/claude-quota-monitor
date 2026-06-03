@@ -133,13 +133,21 @@
 
       <!-- Créditos de uso -->
       <div id="extra-usage-row" class="weekly-row hidden">
-        <div class="stat-label" data-i18n="extra_usage_label"></div>
-        <div class="bar-wrapper bar-wrapper--sm">
-          <div id="bar-extra-usage" class="bar bar--sm bar--extra"></div>
-        </div>
-        <div class="bar-meta">
-          <span id="extra-usage-amount-text" class="small">—</span>
-          <span id="extra-usage-limit-text" class="muted small">—</span>
+        <button id="extra-usage-toggle" class="extra-usage-header">
+          <div class="stat-label" data-i18n="extra_usage_label"></div>
+          <svg id="extra-usage-chevron" viewBox="0 0 12 12" fill="none" stroke="currentColor"
+               stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="2,4 6,8 10,4"/>
+          </svg>
+        </button>
+        <div id="extra-usage-body">
+          <div class="bar-wrapper bar-wrapper--sm">
+            <div id="bar-extra-usage" class="bar bar--sm bar--extra"></div>
+          </div>
+          <div class="bar-meta">
+            <span id="extra-usage-amount-text" class="small">—</span>
+            <span id="extra-usage-limit-text" class="muted small">—</span>
+          </div>
         </div>
       </div>
 
