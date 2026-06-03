@@ -90,6 +90,25 @@ function setBar(barEl, pct) {
     (pct >= 90 ? ' crit' : pct >= 70 ? ' warn' : '');
 }
 
+/* ── Formatação do nome do plano ── */
+function formatPlan(raw) {
+  if (!raw) return 'Pro';
+  const map = {
+    'free':         'Free',
+    'pro':          'Pro',
+    'max':          'Max',
+    'max_5x':       'Max (5×)',
+    'max_20x':      'Max (20×)',
+    'claude_max':   'Max',
+    'claude_max_5': 'Max (5×)',
+    'claude_max_20':'Max (20×)',
+    'team':         'Team',
+    'enterprise':   'Enterprise',
+  };
+  const key = raw.toString().toLowerCase().replace(/[\s-]+/g, '_');
+  return map[key] ?? raw.toString().split(/[\s_-]/).map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+}
+
 /* ── Renderização ── */
 function render(u) {
   const hasData = u?.percent !== undefined;
@@ -97,8 +116,7 @@ function render(u) {
   document.getElementById('empty-section').classList.toggle('hidden', hasData);
   if (!hasData) return;
 
-  document.getElementById('plan').textContent =
-    u.plan ? u.plan.charAt(0).toUpperCase() + u.plan.slice(1).toLowerCase() : 'Pro';
+  document.getElementById('plan').textContent = formatPlan(u.plan);
 
   const pct = Math.min(100, Math.max(0, u.percent));
   setBar(document.getElementById('bar'), pct);

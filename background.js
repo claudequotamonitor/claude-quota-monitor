@@ -10,6 +10,18 @@ const ALARM = 'quota-poll';
 const POLL_MINUTES = 10;
 
 /* ── Fetch direto do background (funciona com os cookies do usuário) ── */
+async function fetchPlan(orgId) {
+  try {
+    const res = await fetch(
+      `https://claude.ai/api/organizations/${orgId}`,
+      { credentials: 'include' }
+    );
+    if (!res.ok) return null;
+    const d = await res.json();
+    return d?.plan_nickname ?? d?.plan ?? d?.tier ?? d?.subscription_type ?? null;
+  } catch { return null; }
+}
+
 async function fetchUsage() {
   const { claudeUsage } = await chrome.storage.local.get('claudeUsage');
   const orgId = claudeUsage?.orgId;
@@ -29,6 +41,9 @@ async function fetchUsage() {
     // Claude Design weekly quota (internal API field: seven_day_omelette)
     const design = data.seven_day_omelette ?? null;
 
+    // Re-busca o plano para refletir upgrades/downgrades sem precisar abrir claude.ai
+    const plan = await fetchPlan(orgId);
+
     chrome.storage.local.set({
       claudeUsage: {
         ...claudeUsage,
@@ -38,6 +53,7 @@ async function fetchUsage() {
         weeklyResetAt:       data.seven_day?.resets_at,
         designWeeklyPercent: design?.utilization,
         designWeeklyResetAt: design?.resets_at,
+        ...(plan ? { plan } : {}), // só sobrescreve se obteve um valor
         ts: Date.now()
       }
     });

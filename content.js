@@ -25,7 +25,7 @@ async function getPlan(orgId) {
     const res = await fetch(`/api/organizations/${orgId}`, { credentials: 'include' });
     if (!res.ok) return null;
     const d = await res.json();
-    return d?.plan_nickname ?? d?.plan ?? d?.tier ?? null;
+    return d?.plan_nickname ?? d?.plan ?? d?.tier ?? d?.subscription_type ?? null;
   } catch { return null; }
 }
 
@@ -54,7 +54,7 @@ async function fetchAndStore() {
         weeklyResetAt:       data.seven_day?.resets_at,
         designWeeklyPercent: design?.utilization,
         designWeeklyResetAt: design?.resets_at,
-        plan:                plan ?? 'Pro',
+        plan:                plan ?? null,
         orgId,
         ts: Date.now()
       }
