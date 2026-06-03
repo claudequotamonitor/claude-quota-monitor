@@ -56,10 +56,10 @@ body {
 }
 
 .container {
-  padding: 16px;
+  padding: 14px 16px;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 11px;
 }
 
 /* ── Header ── */
@@ -209,13 +209,13 @@ h1 {
 .weekly-row {
   background: var(--surface);
   border-radius: 8px;
-  padding: 10px 12px;
+  padding: 8px 10px;
   display: flex;
   flex-direction: column;
   gap: 0;
 }
 
-.weekly-row .stat-label { margin-bottom: 8px; }
+.weekly-row .stat-label { margin-bottom: 6px; }
 
 .weekly-category { display: flex; flex-direction: column; gap: 0; }
 
@@ -225,13 +225,13 @@ h1 {
   text-transform: uppercase;
   letter-spacing: 0.5px;
   color: var(--muted);
-  margin-bottom: 5px;
+  margin-bottom: 4px;
 }
 
 .weekly-cat-divider {
   height: 1px;
   background: var(--surface2);
-  margin: 8px 0;
+  margin: 6px 0;
 }
 
 .weekly-row .bar-meta { margin-top: 2px; }
@@ -259,7 +259,7 @@ h1 {
 #extra-usage-limit-text { font-size: 11px; }
 
 /* ── Créditos de uso — espaçamento e recolhível ── */
-#extra-usage-row { margin-top: 4px; }
+#extra-usage-row { margin-top: 2px; }
 
 .extra-usage-header {
   display: flex;
@@ -308,10 +308,10 @@ h1 {
 /* ── Footer ── */
 footer {
   border-top: 1px solid var(--border);
-  padding-top: 10px;
+  padding-top: 8px;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 5px;
 }
 
 #refresh-btn {
