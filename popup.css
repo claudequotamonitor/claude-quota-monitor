@@ -237,13 +237,26 @@ h1 {
 .weekly-row .bar-meta { margin-top: 2px; }
 
 #weekly-pct-text,
+#weekly-sonnet-pct-text,
 #weekly-design-pct-text { font-size: 12px; font-weight: 600; color: var(--weekly-text); }
 #weekly-reset-text,
+#weekly-sonnet-reset-text,
 #weekly-design-reset-text { font-size: 11px; }
+
+.bar--sonnet { background: #0e7490; }
+.bar--sonnet.warn { background: #dd6b20; }
+.bar--sonnet.crit { background: #e53e3e; }
 
 .bar--design { background: #6366f1; }
 .bar--design.warn { background: #dd6b20; }
 .bar--design.crit { background: #e53e3e; }
+
+.bar--extra { background: #b45309; }
+.bar--extra.warn { background: #dd6b20; }
+.bar--extra.crit { background: #e53e3e; }
+
+#extra-usage-amount-text { font-size: 12px; font-weight: 600; color: var(--weekly-text); }
+#extra-usage-limit-text { font-size: 11px; }
 
 /* ── Utilidades ── */
 .muted  { color: var(--muted); font-size: 12px; }

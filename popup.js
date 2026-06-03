@@ -90,6 +90,17 @@ function setBar(barEl, pct) {
     (pct >= 90 ? ' crit' : pct >= 70 ? ' warn' : '');
 }
 
+/* ── Formatação monetária ── */
+function fmtCurrency(amountCents, currency) {
+  try {
+    return new Intl.NumberFormat(undefined, {
+      style: 'currency', currency, minimumFractionDigits: 2
+    }).format(amountCents / 100);
+  } catch {
+    return `${currency} ${(amountCents / 100).toFixed(2)}`;
+  }
+}
+
 /* ── Formatação do nome do plano ── */
 function formatPlan(raw) {
   if (!raw) return 'Pro';
@@ -144,13 +155,28 @@ function render(u) {
     document.getElementById('weekly-reset-text').textContent =
       `${t('resets_in')} ${fmtReset(u.weeklyResetAt)}`;
 
+    // Apenas Sonnet
+    const sonnetCat = document.getElementById('sonnet-category');
+    if (u.sonnetWeeklyPercent !== undefined) {
+      sonnetCat.classList.remove('hidden');
+      const sp = Math.min(100, Math.max(0, u.sonnetWeeklyPercent));
+      const barS = document.getElementById('bar-weekly-sonnet');
+      barS.classList.add('bar--sm', 'bar--sonnet');
+      setBar(barS, sp);
+      document.getElementById('weekly-sonnet-pct-text').textContent = `${sp}% ${t('used_suffix')}`;
+      document.getElementById('weekly-sonnet-reset-text').textContent =
+        `${t('resets_in')} ${fmtReset(u.sonnetWeeklyResetAt)}`;
+    } else {
+      sonnetCat.classList.add('hidden');
+    }
+
     // Claude Design
     const designCat = document.getElementById('design-category');
     if (u.designWeeklyPercent !== undefined) {
       designCat.classList.remove('hidden');
       const dp = Math.min(100, Math.max(0, u.designWeeklyPercent));
       const barD = document.getElementById('bar-weekly-design');
-      barD.classList.add('bar--sm');
+      barD.classList.add('bar--sm', 'bar--design');
       setBar(barD, dp);
       document.getElementById('weekly-design-pct-text').textContent = `${dp}% ${t('used_suffix')}`;
       document.getElementById('weekly-design-reset-text').textContent =
@@ -160,6 +186,25 @@ function render(u) {
     }
   } else {
     weeklyRow.classList.add('hidden');
+  }
+
+  // Créditos de uso
+  const extraRow = document.getElementById('extra-usage-row');
+  if (u.extraUsageEnabled && u.extraUsageLimit > 0) {
+    extraRow.classList.remove('hidden');
+    const ep = u.extraUsageLimit > 0
+      ? Math.min(100, Math.round((u.extraUsageUsed / u.extraUsageLimit) * 100))
+      : 0;
+    const barE = document.getElementById('bar-extra-usage');
+    barE.classList.add('bar--sm', 'bar--extra');
+    setBar(barE, ep);
+    const cur = u.extraUsageCurrency || 'USD';
+    document.getElementById('extra-usage-amount-text').textContent =
+      `${fmtCurrency(u.extraUsageUsed, cur)} ${t('used_suffix')}`;
+    document.getElementById('extra-usage-limit-text').textContent =
+      `${t('extra_usage_limit')} ${fmtCurrency(u.extraUsageLimit, cur)}`;
+  } else {
+    extraRow.classList.add('hidden');
   }
 
   lastTs = u.ts ?? null;

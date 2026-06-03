@@ -47,16 +47,24 @@ async function fetchAndStore() {
 
     // Claude Design weekly quota (internal API field: seven_day_omelette)
     const design = data.seven_day_omelette ?? null;
+    const sonnet = data.seven_day_sonnet   ?? null;
+    const extra  = data.extra_usage        ?? null;
 
     chrome.storage.local.set({
       claudeUsage: {
-        percent:             session.utilization,
-        resetAt:             session.resets_at,
-        weeklyPercent:       data.seven_day?.utilization,
-        weeklyResetAt:       data.seven_day?.resets_at,
-        designWeeklyPercent: design?.utilization,
-        designWeeklyResetAt: design?.resets_at,
-        plan:                plan ?? null,
+        percent:              session.utilization,
+        resetAt:              session.resets_at,
+        weeklyPercent:        data.seven_day?.utilization,
+        weeklyResetAt:        data.seven_day?.resets_at,
+        sonnetWeeklyPercent:  sonnet?.utilization,
+        sonnetWeeklyResetAt:  sonnet?.resets_at,
+        designWeeklyPercent:  design?.utilization,
+        designWeeklyResetAt:  design?.resets_at,
+        extraUsageEnabled:    extra?.is_enabled  ?? false,
+        extraUsageUsed:       extra?.used_credits ?? 0,
+        extraUsageLimit:      extra?.monthly_limit ?? 0,
+        extraUsageCurrency:   extra?.currency ?? null,
+        plan:                 plan ?? null,
         orgId,
         ts: Date.now()
       }

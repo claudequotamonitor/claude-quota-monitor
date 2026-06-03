@@ -1,4 +1,4 @@
-{
+﻿{
   "ext_name": {
     "message": "Claude Quota Monitor"
   },
@@ -133,5 +133,14 @@
   },
   "review_star_title": {
     "message": "Оценить в Chrome Web Store"
+  },
+  "weekly_sonnet": {
+    "message": "Только Sonnet"
+  },
+  "extra_usage_label": {
+    "message": "Кредиты использования"
+  },
+  "extra_usage_limit": {
+    "message": "лимит"
   }
 }

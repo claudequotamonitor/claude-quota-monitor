@@ -1,4 +1,4 @@
-{
+﻿{
   "ext_name": {
     "message": "مراقب حصة Claude"
   },
@@ -133,5 +133,14 @@
   },
   "review_star_title": {
     "message": "التقييم على Chrome Web Store"
+  },
+  "weekly_sonnet": {
+    "message": "Sonnet فقط"
+  },
+  "extra_usage_label": {
+    "message": "رصيد الاستخدام"
+  },
+  "extra_usage_limit": {
+    "message": "حد"
   }
 }
