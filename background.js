@@ -18,7 +18,9 @@ async function fetchPlan(orgId) {
     );
     if (!res.ok) return null;
     const d = await res.json();
-    return d?.plan_nickname ?? d?.plan ?? d?.tier ?? d?.subscription_type ?? null;
+    // rate_limit_tier ex: "default_claude_max_5x", "default_pro", "default_free"
+    // capabilities ex: ["claude_max", "chat"]
+    return d?.rate_limit_tier ?? d?.capabilities?.[0] ?? d?.plan_nickname ?? d?.plan ?? d?.tier ?? null;
   } catch { return null; }
 }
 
