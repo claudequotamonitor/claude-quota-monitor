@@ -43,6 +43,7 @@ async function fetchUsage() {
     // Claude Design weekly quota (internal API field: seven_day_omelette)
     const design = data.seven_day_omelette ?? null;
     const sonnet = data.seven_day_sonnet   ?? null;
+    const opus   = data.seven_day_opus     ?? null;
     const extra  = data.extra_usage        ?? null;
 
     // Re-busca o plano para refletir upgrades/downgrades sem precisar abrir claude.ai
@@ -57,6 +58,8 @@ async function fetchUsage() {
         weeklyResetAt:        data.seven_day?.resets_at,
         sonnetWeeklyPercent:  sonnet?.utilization,
         sonnetWeeklyResetAt:  sonnet?.resets_at,
+        opusWeeklyPercent:    opus?.utilization,
+        opusWeeklyResetAt:    opus?.resets_at,
         designWeeklyPercent:  design?.utilization,
         designWeeklyResetAt:  design?.resets_at,
         extraUsageEnabled:    extra?.is_enabled  ?? false,

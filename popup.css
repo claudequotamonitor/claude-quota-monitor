@@ -51,7 +51,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   background: var(--bg);
   color: var(--text);
-  width: 280px;
+  width: 290px;
   transition: background 0.2s, color 0.2s;
 }
 
@@ -238,14 +238,20 @@ h1 {
 
 #weekly-pct-text,
 #weekly-sonnet-pct-text,
+#weekly-opus-pct-text,
 #weekly-design-pct-text { font-size: 12px; font-weight: 600; color: var(--weekly-text); }
 #weekly-reset-text,
 #weekly-sonnet-reset-text,
+#weekly-opus-reset-text,
 #weekly-design-reset-text { font-size: 11px; }
 
 .bar--sonnet { background: #0e7490; }
 .bar--sonnet.warn { background: #dd6b20; }
 .bar--sonnet.crit { background: #e53e3e; }
+
+.bar--opus { background: #7c3aed; }
+.bar--opus.warn { background: #dd6b20; }
+.bar--opus.crit { background: #e53e3e; }
 
 .bar--design { background: #6366f1; }
 .bar--design.warn { background: #dd6b20; }

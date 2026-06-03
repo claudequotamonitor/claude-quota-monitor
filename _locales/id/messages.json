@@ -142,5 +142,8 @@
   },
   "extra_usage_limit": {
     "message": "batas"
+  },
+  "weekly_opus": {
+    "message": "Hanya Opus"
   }
 }

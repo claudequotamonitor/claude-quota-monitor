@@ -142,5 +142,8 @@
   },
   "extra_usage_limit": {
     "message": "limite"
+  },
+  "weekly_opus": {
+    "message": "Apenas Opus"
   }
 }

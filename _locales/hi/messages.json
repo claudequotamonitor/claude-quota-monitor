@@ -142,5 +142,8 @@
   },
   "extra_usage_limit": {
     "message": "सीमा"
+  },
+  "weekly_opus": {
+    "message": "केवल Opus"
   }
 }

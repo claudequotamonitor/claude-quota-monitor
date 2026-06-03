@@ -142,5 +142,8 @@
   },
   "extra_usage_limit": {
     "message": "حد"
+  },
+  "weekly_opus": {
+    "message": "Opus فقط"
   }
 }

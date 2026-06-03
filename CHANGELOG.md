@@ -4,6 +4,27 @@ All notable changes to Claude Quota Monitor are documented here.
 
 ---
 
+## [1.7.1] — 2026-06-03
+
+### Added
+- **Claude Opus weekly bar** — new category in the weekly section (purple `#7c3aed`), shown only when the quota exists for the account
+- **Sonnet-only weekly bar** — new category tracking `seven_day_sonnet` quota (cyan `#0e7490`)
+- **Usage Credits section** — displays monthly credit spending (`extra_usage`) with a monetary progress bar and `Intl.NumberFormat` currency formatting; collapsible with state persisted in `chrome.storage.local`
+
+### Fixed
+- **`setBar` color loss on re-render** — function was rebuilding `className` without preserving `bar--sonnet`, `bar--opus`, `bar--design`, `bar--extra` modifiers; now restores all modifier classes before reassigning
+- **Plan name not updating after subscription change** — `background.js` spread was preserving stale `plan` value on every poll; now re-fetches from `rate_limit_tier` / `capabilities` fields on each background cycle
+- **Plan display for Max plans** — API exposes plan via `rate_limit_tier` (e.g. `default_claude_max_5x`), not `plan`/`plan_nickname`; mapped via `formatPlan()` lookup table
+
+### Improved
+- Popup width increased 280px → 290px for better horizontal breathing room
+- Spacing compacted (container gap, weekly-row padding, footer gap) to stay within Chrome's 600px popup height cap
+
+### Localization
+- New strings (`weekly_sonnet`, `weekly_opus`, `extra_usage_label`, `extra_usage_limit`) fully translated in all 10 languages
+
+---
+
 ## [1.7] — 2026-05-04
 
 ### Added

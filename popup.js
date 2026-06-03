@@ -86,8 +86,19 @@ setInterval(tickLastUpdate, 1000);
 /* ── Barra de progresso ── */
 function setBar(barEl, pct) {
   barEl.style.width = `${pct}%`;
-  barEl.className = 'bar' + (barEl.classList.contains('bar--sm') ? ' bar--sm' : '') +
-    (pct >= 90 ? ' crit' : pct >= 70 ? ' warn' : '');
+  // Preserva todos os modificadores antes de reconstruir o className
+  const sm     = barEl.classList.contains('bar--sm');
+  const sonnet = barEl.classList.contains('bar--sonnet');
+  const opus   = barEl.classList.contains('bar--opus');
+  const design = barEl.classList.contains('bar--design');
+  const extra  = barEl.classList.contains('bar--extra');
+  barEl.className = 'bar'
+    + (sm     ? ' bar--sm'     : '')
+    + (sonnet ? ' bar--sonnet' : '')
+    + (opus   ? ' bar--opus'   : '')
+    + (design ? ' bar--design' : '')
+    + (extra  ? ' bar--extra'  : '')
+    + (pct >= 90 ? ' crit' : pct >= 70 ? ' warn' : '');
 }
 
 /* ── Formatação monetária ── */
@@ -160,9 +171,7 @@ function render(u) {
     if (u.sonnetWeeklyPercent !== undefined) {
       sonnetCat.classList.remove('hidden');
       const sp = Math.min(100, Math.max(0, u.sonnetWeeklyPercent));
-      const barS = document.getElementById('bar-weekly-sonnet');
-      barS.classList.add('bar--sm', 'bar--sonnet');
-      setBar(barS, sp);
+      setBar(document.getElementById('bar-weekly-sonnet'), sp);
       document.getElementById('weekly-sonnet-pct-text').textContent = `${sp}% ${t('used_suffix')}`;
       document.getElementById('weekly-sonnet-reset-text').textContent =
         `${t('resets_in')} ${fmtReset(u.sonnetWeeklyResetAt)}`;
@@ -170,14 +179,25 @@ function render(u) {
       sonnetCat.classList.add('hidden');
     }
 
+    // Claude Opus
+    const opusCat = document.getElementById('opus-category');
+    if (u.opusWeeklyPercent !== undefined) {
+      opusCat.classList.remove('hidden');
+      const op = Math.min(100, Math.max(0, u.opusWeeklyPercent));
+      setBar(document.getElementById('bar-weekly-opus'), op);
+      document.getElementById('weekly-opus-pct-text').textContent = `${op}% ${t('used_suffix')}`;
+      document.getElementById('weekly-opus-reset-text').textContent =
+        `${t('resets_in')} ${fmtReset(u.opusWeeklyResetAt)}`;
+    } else {
+      opusCat.classList.add('hidden');
+    }
+
     // Claude Design
     const designCat = document.getElementById('design-category');
     if (u.designWeeklyPercent !== undefined) {
       designCat.classList.remove('hidden');
       const dp = Math.min(100, Math.max(0, u.designWeeklyPercent));
-      const barD = document.getElementById('bar-weekly-design');
-      barD.classList.add('bar--sm', 'bar--design');
-      setBar(barD, dp);
+      setBar(document.getElementById('bar-weekly-design'), dp);
       document.getElementById('weekly-design-pct-text').textContent = `${dp}% ${t('used_suffix')}`;
       document.getElementById('weekly-design-reset-text').textContent =
         `${t('resets_in')} ${fmtReset(u.designWeeklyResetAt)}`;

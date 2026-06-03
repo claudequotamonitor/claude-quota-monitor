@@ -142,5 +142,8 @@
   },
   "extra_usage_limit": {
     "message": "সীমা"
+  },
+  "weekly_opus": {
+    "message": "শুধু Opus"
   }
 }

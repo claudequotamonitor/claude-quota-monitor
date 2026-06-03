@@ -142,5 +142,8 @@
   },
   "extra_usage_limit": {
     "message": "上限"
+  },
+  "weekly_opus": {
+    "message": "仅 Opus"
   }
 }
